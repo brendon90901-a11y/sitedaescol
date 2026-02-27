@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CETI Francisco Luís de Moraes</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html{scroll-behavior:smooth;}
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f2f4f8;
+    color:#333;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    width:100%;
+    background:#0a3d62;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
+}
+
+nav h3{color:white;}
+nav ul{list-style:none;display:flex;gap:25px;}
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+nav ul li a:hover{color:#f1c40f;}
+
+/* HERO */
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url('img/fachada.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h1{font-size:3rem;animation:fadeDown 1.5s ease;}
+.hero p{margin-top:15px;font-size:1.2rem;animation:fadeUp 1.8s ease;}
+
+.btn{
+    margin-top:20px;
+    display:inline-block;
+    padding:10px 20px;
+    background:#f1c40f;
+    color:#000;
+    text-decoration:none;
+    border-radius:5px;
+    font-weight:600;
+    transition:0.3s;
+}
+.btn:hover{background:white;}
+
+/* SECTIONS */
+section{padding:90px 8%;}
+h2{text-align:center;margin-bottom:40px;color:#0a3d62;}
+
+.hidden{opacity:0;transform:translateY(40px);transition:all 1s ease;}
+.show{opacity:1;transform:translateY(0);}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+.card:hover{transform:translateY(-8px);}
+.card h3{margin-bottom:10px;color:#0a3d62;}
+
+/* GALERIA */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+.gallery img{
+    width:100%;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+.gallery img:hover{transform:scale(1.05);}
+
+/* FOOTER */
+footer{
+    background:#0a3d62;
+    color:white;
+    text-align:center;
+    padding:40px 10px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    color:white;
+    font-size:28px;
+    padding:15px 18px;
+    border-radius:50%;
+    text-decoration:none;
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+    z-index:1000;
+    transition:0.3s;
+}
+.whatsapp:hover{transform:scale(1.1);}
+
+@keyframes fadeDown{
+    from{opacity:0;transform:translateY(-40px);}
+    to{opacity:1;transform:translateY(0);}
+}
+@keyframes fadeUp{
+    from{opacity:0;transform:translateY(40px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+@media(max-width:768px){
+    nav ul{display:none;}
+    .hero h1{font-size:2rem;}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h3>CETI Francisco Luis de Moraes</h3>
+    <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#mvv">Missão</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#noticias">Notícias</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
+    <div>
+        <h1>CETI Francisco Luís de Moraes</h1>
+        <p>Centro Estadual de Tempo Integral - Lagoa do Piauí</p>
+        <a href="#sobre" class="btn">Conheça a Escola</a>
+    </div>
+</div>
+
+<section id="sobre" class="hidden">
+<h2>Sobre a Escola</h2>
+<p style="max-width:900px;margin:auto;text-align:center;line-height:1.9;">
+O CETI Francisco Luís de Moraes é referência em educação pública de qualidade,
+promovendo transformação social, desenvolvimento humano e construção de sonhos.
+Aqui, cada aluno é incentivado a acreditar no seu potencial e construir seu projeto de vida.
+</p>
+</section>
+
+<!-- SEÇÃO HISTÓRIA DA ESCOLA -->
+<section style="padding:50px 5%; background:#fff;">
+  <h2 style="text-align:center; color:#0a3d62; margin-bottom:40px;">História da Escola</h2>
+
+  <!-- CONTEÚDO: TEXTO + FOTO -->
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:30px;">
+
+    <!-- TEXTO -->
+    <div style="flex:1; min-width:300px; max-width:500px; text-align:justify; line-height:1.8; color:#333;">
+      <p>
+     O CETI Francisco Luís de Moraes nasceu com um sonho: levar educação de qualidade a jovens e adolescentes, acreditando no poder transformador do conhecimento. No início, enfrentou muitos desafios: recursos limitados, falta de estrutura e obstáculos que poderiam ter desanimado qualquer instituição. Mas a determinação de professores, alunos e toda a comunidade escolar fez a diferença.
+
+Com esforço e dedicação, a escola foi se fortalecendo, conquistando cada vez mais confiança e reconhecimento. Cada dificuldade se tornou aprendizado, cada obstáculo, motivação para crescer. Hoje, o CETI é referência em educação pública, reconhecido não apenas na cidade, mas em diversas regiões, inspirando outras escolas e sendo exemplo de compromisso com o desenvolvimento humano.
+
+Mais do que ensinar conteúdos, o CETI Francisco Luís de Moraes forma cidadãos preparados para a vida, incentivando cada aluno a acreditar em seu potencial e a construir seus próprios sonhos. Uma escola que, mesmo depois de superar tantas dificuldades, prova todos os dias que com dedicação, união e propósito, é possível transformar vidas e construir futuros.
+      </p>
+    </div>
+
+    <!-- FOTO ANTIGA -->
+    <div style="flex:1; min-width:250px; max-width:400px; text-align:center;">
+      <img src="escola_antiga.jpeg" alt="Escola Antiga" 
+           style="width:100%; border-radius:10px; border:3px solid #0a3d62; object-fit:cover;">
+      <p style="margin-top:10px; color:#555; font-size:14px;">Foto do antigo prédio (Google Maps)</p>
+    </div>
+
+    <!-- FOTO ATUAL -->
+    <div style="flex:1; min-width:250px; max-width:400px; text-align:center;">
+      <img src="fachada.jpg.jpeg" alt="Escola Antiga" 
+           style="width:100%; border-radius:10px; border:3px solid #0a3d62; object-fit:cover;">
+      <p style="margin-top:10px; color:#555; font-size:14px;">Foto atual da escola (iPhone 11)</p>
+    </div>
+
+  </div>
+</section>
+
+<section id="mvv" class="hidden">
+<h2>Missão, Visão e Valores</h2>
+<div class="cards">
+<div class="card">
+<h3>Missão</h3>
+<p>Garantir educação pública de excelência formando cidadãos críticos e preparados para o futuro.</p>
+</div>
+<div class="card">
+<h3>Visão</h3>
+<p>Ser referência regional em inovação pedagógica e qualidade educacional.</p>
+</div>
+<div class="card">
+<h3>Valores</h3>
+<p>Ética, respeito, responsabilidade, inclusão e compromisso com o aprendizado.</p>
+</div>
+</div>
+</section>
+
+<!-- SEÇÃO GESTÃO DA ESCOLA -->
+<section style="padding:50px 5%; background:#f9f9f9; text-align:center;">
+  <h2 style="color:#0a3d62; margin-bottom:40px;">Gestão da Escola</h2>
+
+  <!-- PIRÂMIDE -->
+  <div style="display:flex; flex-direction:column; align-items:center; gap:30px;">
+
+    <!-- DIRETOR (Topo da pirâmide) -->
+    <div style="text-align:center;">
+      <img src="diretor.jpg.jpeg" alt="Diretor" 
+           style="width:150px; height:150px; border-radius:50%; object-fit:cover; border:4px solid #0a3d62; margin-bottom:10px;">
+      <h3 style="margin:0; color:#0a3d62;">Diretor</h3>
+      <p style="margin:0; color:#555;">Yago Lucas Carvalho de Sousa</p>
+    </div>
+
+    <!-- SEGUNDA LINHA: Coordenadora e Secretaria -->
+    <div style="display:flex; justify-content:center; gap:50px; flex-wrap:wrap;">
+      <div style="text-align:center; width:150px;">
+        <h3 style="margin:0; color:#0a3d62;">Coordenadora</h3>
+        <p style="margin:0; color:#555;">Paulas Ramires</p>
+      </div>
+      <div style="text-align:center; width:150px;">
+        <h3 style="margin:0; color:#0a3d62;">Secretaria</h3>
+        <p style="margin:0; color:#555;">Janelle Brandim</p>
+      </div>
+    </div>
+
+    <!-- TERCEIRA LINHA: Supervisora -->
+    <div style="text-align:center; margin-top:20px;">
+      <h3 style="margin:0; color:#0a3d62;">Supervisora</h3>
+      <p style="margin:0; color:#555;">Raimunda Edilene de Macedo</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CORPO DOCENTE -->
+<section style="padding:50px 5%;">
+<h2 style="text-align:center; color:#0a3d62;">Nosso Corpo Docente</h2>
+
+<div style="display:flex; flex-wrap:wrap; justify-content:center; gap:25px; margin-top:30px;">
+
+  <div style="background:white; padding:20px; border-radius:10px; text-align:center; width:220px;">
+    <h3 style="color:#0a3d62;">Alana Barradas</h3>
+    <p>Química</p>
+  </div>
+
+  <div style="background:white; padding:20px; border-radius:10px; text-align:center; width:220px;">
+    <h3 style="color:#0a3d62;">Ana Maria</h3>
+    <p>Português</p>
+  </div>
+
+  <div style="background:white; padding:20px; border-radius:10px; text-align:center; width:220px;">
+    <h3 style="color:#0a3d62;">Cardoso Filho</h3>
+    <p>Matemática - IA</p>
+  </div>
+
+  <div style="background:white; padding:20px; border-radius:10px; text-align:center; width:220px;">
+    <h3 style="color:#0a3d62;">Carlos Eduardo</h3>
+    <p>História</p>
+  </div>
+
+  <div style="background:white; padding:20px; border-radius:10px; text-align:center; width:220px;">
+    <h3 style="color:#0a3d62;">Edilson</h3>
+    <p>Geografia - Sociologia</p>
+  </div>
+
+  <div style="background:white; padding:20px; border-radius:10px; text-align:center; width:220px;">
+    <h3 style="color:#0a3d62;">Moura</h3>
+    <p>Biologia</p>
+  </div>
+
+  <div style="background:white; padding:20px; border-radius:10px; text-align:center; width:220px;">
+    <h3 style="color:#0a3d62;">Pâmela Gerline</h3>
+    <p>Espanhol - Inglês - Empreendedorismo</p>
+  </div>
+
+  <div style="background:white; padding:20px; border-radius:10px; text-align:center; width:220px;">
+    <h3 style="color:#0a3d62;">Rinaldo Brandim</h3>
+    <p>Educação Física - Física</p>
+  </div>
+
+</div>
+</section>
+
+<section id="galeria" class="hidden">
+<h2>Galeria</h2>
+<div class="gallery">
+<img src="fachada.jpg.jpeg" alt="Fachada da escola">
+<img src="quadra.jpg.jpeg" alt="Quadra da escola">
+<img src="sala.jpg.jpeg" alt="Sala de aula">
+</div>
+</section>
+
+<section id="noticias" class="hidden">
+<h2>Notícias e Informativos</h2>
+<div class="cards">
+<div class="card">
+<h3>📚 Projeto de Leitura 2026</h3>
+<p style="font-size:14px;color:gray;">Publicado em Março de 2026</p>
+<p>Incentivando o hábito da leitura e o desenvolvimento intelectual dos estudantes.</p>
+<a href="https://seduc.pi.gov.br/noticias/noticia/13030/seduc-abre-edital-para-financiar-100-projetos-de-leitura-em-escolas-da-rede-estadual" class="btn">Leia mais</a>
+</div>
+
+<div class="card">
+<h3>🏆 Jogos Escolares</h3>
+<p style="font-size:14px;color:gray;">Publicado em Fevereiro de 2026</p>
+<p>Participação ativa dos alunos promovendo esporte, integração e cidadania.</p>
+<a href="https://esportes.pi.gov.br/" class="btn">Leia mais</a>
+</div>
+
+<div class="card">
+<h3>🎓 Preparação para o ENEM</h3>
+<p style="font-size:14px;color:gray;">Publicado em Janeiro de 2026</p>
+<p>Aulas intensificadas e simulados para garantir melhor desempenho acadêmico.</p>
+<a href="https://seduc.pi.gov.br/noticias/noticia/9223/estudantes-se-preparam-para-o-enem-e-participam-das-revisoes-presenciais" class="btn">Leia mais</a>
+</div>
+</div>
+</section>
+
+<!-- BOTÃO WHATSAPP -->
+<a href="https://wa.me/5586995756259" class="whatsapp" target="_blank">💬</a>
+
+<script>
+const observer=new IntersectionObserver((entries)=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){entry.target.classList.add('show');}
+});
+});
+document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
+</script>
+
+</body>
+</html>
+
+<!-- BOTÃO FLUTUANTE CHATGPT -->
+<a href="https://chat.openai.com/" target="_blank" 
+   style="position:fixed; bottom:90px; right:20px; 
+          background:#444; color:white; font-size:28px; 
+          padding:15px 18px; border-radius:50%; 
+          text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.3); 
+          display:flex; justify-content:center; align-items:center;">
+💡
+</a>
+
+<!-- BOTÃO FLUTUANTE GOV.PI -->
+<a href="https://www.pi.gov.br/" target="_blank" 
+   style="position:fixed; bottom:160px; right:20px; 
+          background:#0072bc; color:white; font-size:24px; 
+          padding:15px 18px; border-radius:50%; 
+          text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.3); 
+          display:flex; justify-content:center; align-items:center;">
+🏛️
+</a>
+
+<!-- BOTÃO SEDUC PI -->
+<div style="text-align:center; margin:40px 0;">
+  <a href="http://www.seduc.pi.gov.br/" target="_blank" 
+     style="display:inline-block; background:#004aad; color:white; 
+            padding:15px 25px; border-radius:10px; text-decoration:none; 
+            font-weight:bold; font-size:16px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+    <img src="Seduc_PI_logo.png" alt="SEDUC PI" style="height:60px; vertical-align:middle; margin-right:10px;">
+    <p>Acesse a Seduc PI</p>
+  </a>
+</div>
+
+<!-- BOTÃO DE PESQUISA MODERNO -->
+<div style="position:fixed; top:20px; right:20px; z-index:1000;">
+
+  <!-- ÍCONE DE LUPA -->
+  <button id="search-toggle" 
+          style="background:#0a3d62; color:white; border:none; border-radius:50%; padding:12px; font-size:18px; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
+    🔍
+  </button>
+
+  <!-- CAMPO DE PESQUISA -->
+  <div id="search-container" style="display:none; margin-top:10px; text-align:right; overflow:hidden;">
+    <form action="https://www.google.com/search" method="get" target="_blank" style="display:flex; width:0; transition:width 0.4s;">
+      <input type="text" name="q" placeholder="Pesquisar..." 
+             style="padding:8px; border-radius:5px 0 0 5px; border:1px solid #ccc; width:100%; outline:none;">
+      <button type="submit" 
+              style="background:#0a3d62; color:white; border:none; padding:8px 12px; border-radius:0 5px 5px 0; cursor:pointer;">
+        🔍
+      </button>
+    </form>
+  </div>
+
+</div>
+
+<!-- SCRIPT INLINE PARA ANIMAÇÃO -->
+<script>
+  const toggleBtn = document.getElementById('search-toggle');
+  const searchContainer = document.getElementById('search-container');
+  const searchForm = searchContainer.querySelector('form');
+
+  toggleBtn.onclick = () => {
+    if (searchContainer.style.display === 'none') {
+      searchContainer.style.display = 'block';
+      // animação de largura
+      setTimeout(() => { searchForm.style.width = '250px'; }, 10);
+    } else {
+      searchForm.style.width = '0';
+      setTimeout(() => { searchContainer.style.display = 'none'; }, 400);
+    }
+  };
+</script>
+
+  <!-- CAMPO DE PESQUISA -->
+  <div id="search-box" style="display:none; margin-top:5px; text-align:right;">
+    <form action="https://www.google.com/search" method="get" target="_blank" style="display:flex;">
+      <input type="text" name="q" placeholder="Pesquisar..." 
+             style="padding:8px; border-radius:5px 0 0 5px; border:1px solid #ccc; width:200px; outline:none;">
+      <button type="submit" 
+              style="background:#0a21ee; color:white; border:none; padding:8px 12px; border-radius:0 5px 5px 0; cursor:pointer;">
+        🔍
+      </button>
+    </form>
+  </div>
+
+</div>
+
+<!-- SEÇÃO INAUGURAÇÃO -->
+<section style="padding:50px 5%; background:#e6f0ff; text-align:center;">
+  <h2 style="color:#0a3d62; margin-bottom:30px;">Agradecimento Especial</h2>
+
+  <!-- FOTO DO GOVERNADOR -->
+  <img src="governador.jpg" alt="Governador do Piauí" 
+       style="width:200px; height:200px; border-radius:50%; object-fit:cover; margin-bottom:20px; border:4px solid #0a3d62;">
+       <img src="rodrigotorres.jpeg" alt="Governador do Piauí" 
+       style="width:200px; height:200px; border-radius:50%; object-fit:cover; margin-bottom:20px; border:4px solid #0a3d62;">
+
+  <!-- TEXTO DE AGRADECIMENTO -->
+  <p style="max-width:800px; margin:auto; font-size:16px; line-height:1.8; color:#333;">
+    O CETI Francisco Luís de Moraes agradece de forma especial ao Governador Rafael Fonteles e ao Secretário de Educação Rodrigo Torres pelo apoio e comprometimento com a educação no nosso estado.  
+    Graças a esse incentivo, nossa escola foi inaugurada com estrutura moderna e recursos que permitirão a formação de alunos críticos, responsáveis e preparados para construir um futuro brilhante.
+  </p>
+</section>
+
+<footer>
+<p>© 2026 - CETI Francisco Luís de Moraes</p>
+<p>Lagoa do Piauí - PI</p>
+<p>Desenvolvedor: Brendon Alves dos Santos Lima</p>
+</footer>
