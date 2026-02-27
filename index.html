@@ -100,54 +100,20 @@ h2{text-align:center;margin-bottom:40px;color:#0a3d62;}
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:20px;
 }
-
 .gallery img{
     width:100%;
     border-radius:10px;
     box-shadow:0 5px 15px rgba(0,0,0,0.2);
     transition:0.3s;
-    cursor:pointer;
 }
-
-.gallery img:hover{
-    transform:scale(1.05);
-}
-
-/* ABAS */
-.gallery-tabs{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    margin-bottom:30px;
-    flex-wrap:wrap;
-}
-
-.gallery-tabs button{
-    background:#0a3d62;
-    color:white;
-    border:none;
-    padding:10px 18px;
-    border-radius:5px;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.gallery-tabs button:hover{
-    background:#082b45;
-}
-
-.gallery-tabs button.active{
-    background:#f1c40f;
-    color:black;
-}
+.gallery img:hover{transform:scale(1.05);}
 
 /* FOOTER */
 footer{
     background:#0a3d62;
     color:white;
     text-align:center;
-    padding:30px 10px;
-    margin-top:50px;
+    padding:40px 10px;
 }
 
 /* WHATSAPP */
@@ -352,33 +318,11 @@ Mais do que ensinar conteúdos, o CETI Francisco Luís de Moraes forma cidadãos
 
 <section id="galeria" class="hidden">
 <h2>Galeria</h2>
-<div class="gallery-tabs">
-  <button class="g-tab active" onclick="openGalleryTab(event,'fotos')">📷 Fotos</button>
-  <button class="g-tab" onclick="openGalleryTab(event,'estrutura')">🏫 Estrutura</button>
-  <button class="g-tab" onclick="openGalleryTab(event,'eventos')">🎉 Eventos</button>
+<div class="gallery">
+<img src="fachada.jpg.jpeg" alt="Fachada da escola">
+<img src="quadra.jpg.jpeg" alt="Quadra da escola">
+<img src="sala.jpg.jpeg" alt="Sala de aula">
 </div>
-
-<div id="fotos" class="g-content" style="display:block;">
-  <div class="gallery">
-    <img src="fachada.jpg.jpeg" alt="Fachada da escola">
-    <img src="quadra.jpg.jpeg" alt="Quadra da escola">
-    <img src="sala.jpg.jpeg" alt="Sala de aula">
-  </div>
-</div>
-
-<div id="estrutura" class="g-content">
-  <div class="gallery">
-    <img src="fachada.jpg.jpeg">
-    <img src="quadra.jpg.jpeg">
-  </div>
-</div>
-
-<div id="eventos" class="g-content">
-  <div class="gallery">
-    <img src="sala.jpg.jpeg">
-  </div>
-</div>
-
 </section>
 
 <section id="noticias" class="hidden">
@@ -404,6 +348,14 @@ Mais do que ensinar conteúdos, o CETI Francisco Luís de Moraes forma cidadãos
 <p>Aulas intensificadas e simulados para garantir melhor desempenho acadêmico.</p>
 <a href="https://seduc.pi.gov.br/noticias/noticia/9223/estudantes-se-preparam-para-o-enem-e-participam-das-revisoes-presenciais" class="btn">Leia mais</a>
 </div>
+
+<div class="card">
+  <h3>🏫 Inauguração da Escola CETI Francisco Luís de Moraes</h3>
+  <p style="font-size:14px;color:gray;">Publicado em Fevereiro de 2026</p>
+  <p>Evento oficial de inauguração da nova escola, oferecendo infraestrutura moderna e oportunidades educacionais de qualidade para os estudantes da região.</p>
+  <a href="https://seduc.pi.gov.br/noticias/noticia/XXXX/inauguracao-da-escola-ceti-francisco-luis-de-moraes" class="btn">Leia mais</a>
+</div>
+
 </div>
 </section>
 
@@ -422,19 +374,9 @@ document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
 </body>
 </html>
 
-<!-- BOTÃO FLUTUANTE CHATGPT -->
-<a href="https://chat.openai.com/" target="_blank" 
-   style="position:fixed; bottom:90px; right:20px; 
-          background:#444; color:white; font-size:28px; 
-          padding:15px 18px; border-radius:50%; 
-          text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.3); 
-          display:flex; justify-content:center; align-items:center;">
-💡
-</a>
-
 <!-- BOTÃO FLUTUANTE GOV.PI -->
 <a href="https://www.pi.gov.br/" target="_blank" 
-   style="position:fixed; bottom:160px; right:20px; 
+   style="position:fixed; bottom:100px; right:20px; 
           background:#0072bc; color:white; font-size:24px; 
           padding:15px 18px; border-radius:50%; 
           text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.3); 
@@ -530,25 +472,3 @@ document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
 <p>Lagoa do Piauí - PI</p>
 <p>Desenvolvedor: Brendon Alves dos Santos Lima</p>
 </footer>
-
-<script>
-function openGalleryTab(evt, tabName){
-  var i, content, buttons;
-
-  content=document.getElementsByClassName("g-content");
-  for(i=0;i<content.length;i++){
-    content[i].style.display="none";
-  }
-
-  buttons=document.getElementsByClassName("g-tab");
-  for(i=0;i<buttons.length;i++){
-    buttons[i].classList.remove("active");
-  }
-
-  document.getElementById(tabName).style.display="block";
-  evt.currentTarget.classList.add("active");
-}
-</script>
-
-</body>
-</html>
