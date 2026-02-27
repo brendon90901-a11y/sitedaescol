@@ -14,3 +14,26 @@ function openGalleryTab(evt, tabName){
   document.getElementById(tabName).style.display="block";
   evt.currentTarget.classList.add("active");
 }
+
+document.getElementById("ano").textContent = new Date().getFullYear();
+
+const toggleBtn = document.getElementById("search-toggle");
+const container = document.getElementById("search-container");
+const form = container.querySelector("form");
+
+let aberto = false;
+
+toggleBtn.addEventListener("click", () => {
+  if (!aberto) {
+    container.style.display = "block";
+    setTimeout(() => {
+      form.style.width = "250px";
+    }, 10);
+  } else {
+    form.style.width = "0";
+    setTimeout(() => {
+      container.style.display = "none";
+    }, 400);
+  }
+  aberto = !aberto;
+});

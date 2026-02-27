@@ -23,12 +23,13 @@ nav{
 nav h4{color:white;}
 nav ul{list-style:none;display:flex;gap:25px;}
 nav ul li a{
+    display: inline-block;
     text-decoration:none;
     color:white;
     font-weight:500;
     transition:0.3s;
 }
-nav ul li a:hover{color:#f1c40f;}
+nav ul li a:hover{color:#f1c40f; transform: scale(1.10)}
 
 /* HERO */
 .hero{
@@ -133,13 +134,14 @@ h2{text-align:center;margin-bottom:40px;color:#0a3d62;}
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 20px;
 }
 
 .gallery img {
   width: 100%;
-  height: 180px;
+  height: 260px;
   object-fit: cover;
   border-radius: 10px;
   cursor: pointer;
@@ -161,20 +163,159 @@ footer{
 
 /* WHATSAPP */
 .whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25d366;
-    color:white;
-    font-size:28px;
-    padding:15px 18px;
-    border-radius:50%;
-    text-decoration:none;
-    box-shadow:0 4px 15px rgba(0,0,0,0.3);
-    z-index:1000;
-    transition:0.3s;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background: #25d366;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: 0.3s;
 }
-.whatsapp:hover{transform:scale(1.1);}
+
+.whatsapp img{
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.whatsapp:hover{transform:scale(1.1); background: #91e7b1;}
+
+.pimg{
+    position: fixed;
+    bottom: 130px;
+    right: 20px;
+    background: #2570d3;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.pimg img{
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.pimg:hover{transform:scale(1.1); background:#91c0e7;}
+
+.search{
+    background: #0a3d62;
+    border: none;
+    margin-top: 45px;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: 
+      box-shadow 0.3s ease,
+      transform 0.2s ease;
+}
+
+.search img{
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+.search:hover{
+    background: #0d4f85;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    transform: scale(1.05);
+}
+
+.search:active{
+    transform: scale(2);
+}
+
+.submit{
+    background:#0a3d62; 
+    color:white; 
+    border:none; 
+    padding:8px 12px; 
+    border-radius:0 5px 5px 0; 
+    cursor:pointer;
+} 
+
+.submit img{
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+#search-container{
+  position: absolute;
+  top: 0;
+  margin-top: 50px;
+  right: 50px;      
+  display: none;
+}
+
+#search-container form{
+  display: flex;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.4s ease;
+}
+
+#search-container input{
+  padding: 8px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+  outline: none;
+  width: 200px;
+}
+
+.submit img{
+  width: 16px;
+  height: 16px;
+  filter: invert(1);
+}
+
+.seduc{
+    display: inline-flex;   
+    align-items: center;
+
+    background: #004aad; 
+    color: white; 
+    padding: 15px 25px; 
+    border-radius: 10px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 16px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seduc img{
+    height: 60px; 
+    margin-right: 10px;
+}
+
+.seduc:hover{
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
 
 @keyframes fadeDown{
     from{opacity:0;transform:translateY(-40px);}
@@ -190,50 +331,50 @@ footer{
     .hero h1{font-size:2rem;}
 }
 
-        .hero {
-            position: relative;
-            height: 700px; /* altura do bloco */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: rgb(255, 255, 255);
-            background-image: url('publica/fachada.jpeg'); /* imagem na mesma pasta do HTML */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+.hero {
+    position: relative;
+    height: 700px; /* altura do bloco */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-image: url('publica/fachada.jpeg'); /* imagem na mesma pasta do HTML */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-        /* Sobreposição escura para o texto ficar legível */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 1;
-        }
+/* Sobreposição escura para o texto ficar legível */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
 
-        /* Conteúdo acima da sobreposição */
-        .hero > div {
-            position: relative;
-            z-index: 2;
-        }
+/* Conteúdo acima da sobreposição */
+.hero > div {
+    position: relative;
+    z-index: 2;
+}
 
-        /* Botão estilizado */
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #fffb00;
-            color: rgb(19, 3, 3);
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
+/* Botão estilizado */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #fffb00;
+    color: rgb(19, 3, 3);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
 
-        .btn:hover {
-            background-color: #005ea3;
-        }
+.btn:hover {
+    background-color: #005ea3;
+}
