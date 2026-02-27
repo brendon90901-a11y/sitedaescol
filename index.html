@@ -7,146 +7,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<style>
-html{scroll-behavior:smooth;}
-*{margin:0;padding:0;box-sizing:border-box;}
+<link rel="stylesheet" href="style.css">
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#f2f4f8;
-    color:#333;
-}
-
-/* NAVBAR */
-nav{
-    position:fixed;
-    width:100%;
-    background:#0a3d62;
-    padding:15px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    z-index:1000;
-    box-shadow:0 3px 10px rgba(0,0,0,0.2);
-}
-
-nav h3{color:white;}
-nav ul{list-style:none;display:flex;gap:25px;}
-nav ul li a{
-    text-decoration:none;
-    color:white;
-    font-weight:500;
-    transition:0.3s;
-}
-nav ul li a:hover{color:#f1c40f;}
-
-/* HERO */
-.hero{
-    height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url('img/fachada.jpg');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-    padding:20px;
-}
-
-.hero h1{font-size:3rem;animation:fadeDown 1.5s ease;}
-.hero p{margin-top:15px;font-size:1.2rem;animation:fadeUp 1.8s ease;}
-
-.btn{
-    margin-top:20px;
-    display:inline-block;
-    padding:10px 20px;
-    background:#f1c40f;
-    color:#000;
-    text-decoration:none;
-    border-radius:5px;
-    font-weight:600;
-    transition:0.3s;
-}
-.btn:hover{background:white;}
-
-/* SECTIONS */
-section{padding:90px 8%;}
-h2{text-align:center;margin-bottom:40px;color:#0a3d62;}
-
-.hidden{opacity:0;transform:translateY(40px);transition:all 1s ease;}
-.show{opacity:1;transform:translateY(0);}
-
-/* CARDS */
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    padding:25px;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
-}
-.card:hover{transform:translateY(-8px);}
-.card h3{margin-bottom:10px;color:#0a3d62;}
-
-/* GALERIA */
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-}
-.gallery img{
-    width:100%;
-    border-radius:10px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.2);
-    transition:0.3s;
-}
-.gallery img:hover{transform:scale(1.05);}
-
-/* FOOTER */
-footer{
-    background:#0a3d62;
-    color:white;
-    text-align:center;
-    padding:40px 10px;
-}
-
-/* WHATSAPP */
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25d366;
-    color:white;
-    font-size:28px;
-    padding:15px 18px;
-    border-radius:50%;
-    text-decoration:none;
-    box-shadow:0 4px 15px rgba(0,0,0,0.3);
-    z-index:1000;
-    transition:0.3s;
-}
-.whatsapp:hover{transform:scale(1.1);}
-
-@keyframes fadeDown{
-    from{opacity:0;transform:translateY(-40px);}
-    to{opacity:1;transform:translateY(0);}
-}
-@keyframes fadeUp{
-    from{opacity:0;transform:translateY(40px);}
-    to{opacity:1;transform:translateY(0);}
-}
-
-@media(max-width:768px){
-    nav ul{display:none;}
-    .hero h1{font-size:2rem;}
-}
-</style>
 </head>
 
 <body>
@@ -319,9 +181,9 @@ Mais do que ensinar conteúdos, o CETI Francisco Luís de Moraes forma cidadãos
 <section id="galeria" class="hidden">
 <h2>Galeria</h2>
 <div class="gallery">
-<img src="fachada.jpeg" alt="Fachada da escola">
-<img src="quadra.jpeg" alt="Quadra da escola">
-<img src="sala.jpeg" alt="Sala de aula">
+<img src="publica/fachada.jpeg" alt="Fachada da escola">
+<img src="publica/quadra.jpeg" alt="Quadra da escola">
+<img src="publica/sala.jpeg" alt="Sala de aula">
 </div>
 
 <div id="fotos" class="g-content" style="display:block;">
@@ -445,22 +307,7 @@ document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
 </div>
 
 <!-- SCRIPT INLINE PARA ANIMAÇÃO -->
-<script>
-  const toggleBtn = document.getElementById('search-toggle');
-  const searchContainer = document.getElementById('search-container');
-  const searchForm = searchContainer.querySelector('form');
-
-  toggleBtn.onclick = () => {
-    if (searchContainer.style.display === 'none') {
-      searchContainer.style.display = 'block';
-      // animação de largura
-      setTimeout(() => { searchForm.style.width = '250px'; }, 10);
-    } else {
-      searchForm.style.width = '0';
-      setTimeout(() => { searchContainer.style.display = 'none'; }, 400);
-    }
-  };
-</script>
+<script src="script.js"></script>
 
   <!-- CAMPO DE PESQUISA -->
   <div id="search-box" style="display:none; margin-top:5px; text-align:right;">
