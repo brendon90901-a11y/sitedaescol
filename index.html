@@ -15,7 +15,6 @@
 
 <nav>
     <h4>CETI Francisco Luis de Moraes</h4>
-  
     <ul>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#mvv">Missão</a></li>
@@ -30,9 +29,7 @@
         <p>Centro Estadual de Tempo Integral - Lagoa do Piauí</p>
         <a href="#sobre" class="btn">Conheça a Escola</a>
     </div>
-</div>
-
-</div>
+</div> 
 
 <section id="sobre" class="hidden">
 <h2>Sobre a Escola</h2>
@@ -182,38 +179,33 @@ Mais do que ensinar conteúdos, o CETI Francisco Luís de Moraes forma cidadãos
 </section>
 
 <section id="galeria" class="hidden">
-<h2>Galeria</h2>
-<div class="gallery">
-<img src="publica/fachada.jpeg" alt="Fachada da escola">
-<img src="publica/quadra.jpeg" alt="Quadra da escola">
-<img src="publica/sala.jpeg" alt="Sala de aula">
-</div>
+  <h2>Galeria</h2>
 
-<div id="fotos" class="g-content" style="display:block;">
-  <div class="gallery">
-    <img src="publica/pig.jpeg" alt="Fachada da escola">
-    <img src="publica/sorriso.jpeg" alt="Quadra da escola">
-    <img src="publica/sala.jpeg" alt="Sala de aula">
-    <img src="publica/camilaerafael.jpeg" alt="Camila e Rafael Fonteles">
-    <img src="publica/agro.jpeg" alt="Agro">
+
+  <div id="fotos" class="g-content" style="display:block;">
+    <div class="gallery">
+      <img src="publica/pig.jpeg" alt="Fachada da escola">
+      <img src="publica/sorriso.jpeg" alt="Quadra da escola">
+      <img src="publica/todosjuntos.jpeg" alt="todos juntos">
+      <img src="publica/camilaerafael.jpeg" alt="Camila e Rafael Fonteles">
+      <img src="publica/agro.jpeg" alt="Agro">
+    </div>
   </div>
-</div>
 
-<div id="estrutura" class="g-content">
-  <div class="gallery">
-    <img src="publica/fachada.jpeg">
-    <img src="publica/quadra.jpeg">
-    <img src="publica/sala.jpeg">
+  <div id="estrutura" class="g-content">
+    <div class="gallery">
+      <img src="publica/fachada.jpeg">
+      <img src="publica/quadra.jpeg">
+      <img src="publica/sala.jpeg">
+    </div>
   </div>
-</div>
 
-<div id="eventos" class="g-content">
-  <div class="gallery">
-    <img src="publica/sala.jpeg">
-  </div>
-</div>
-
->>>>>>> Stashed changes
+  <div id="eventos" class="g-content">
+    <div class="gallery">
+      <img src="publica/brendon.jpeg" alt="brendon">
+      <img src="publica/fotoeturma.jpeg" alt="turma">
+    </div>
+  </div> 
 </section>
 
 <section id="noticias" class="hidden">
@@ -251,8 +243,12 @@ Mais do que ensinar conteúdos, o CETI Francisco Luís de Moraes forma cidadãos
 </section>
 
 <!-- BOTÃO WHATSAPP -->
-<a href="https://wa.me/5586995756259" class="whatsapp" target="_blank">💬</a>
+<a href="https://wa.me/5586995756259" target="_blank" class="whatsapp">
+  <img src="publica/chat-left-dots.svg" alt="WhatsApp">
+</a>
 
+
+<!-- FAVOR NÂO MEXER O SITE QUEBRA SEM ISSO -->
 <script>
 const observer=new IntersectionObserver((entries)=>{
 entries.forEach(entry=>{
@@ -260,27 +256,16 @@ if(entry.isIntersecting){entry.target.classList.add('show');}
 });
 });
 document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
-</script>
-
-</body>
-</html>
+</script> 
 
 <!-- BOTÃO FLUTUANTE GOV.PI -->
-<a href="https://www.pi.gov.br/" target="_blank" 
-   style="position:fixed; bottom:100px; right:20px; 
-          background:#0072bc; color:white; font-size:24px; 
-          padding:15px 18px; border-radius:50%; 
-          text-decoration:none; box-shadow:0 4px 15px rgba(0,0,0,0.3); 
-          display:flex; justify-content:center; align-items:center;">
-🏛️
+<a href="https://www.pi.gov.br/" class="pimg" target="_blank">
+  <img alt="pimg" src="publica/bank.svg">
 </a>
 
 <!-- BOTÃO SEDUC PI -->
 <div style="text-align:center; margin:40px 0;">
-  <a href="http://www.seduc.pi.gov.br/" target="_blank" 
-     style="display:inline-block; background:#004aad; color:white; 
-            padding:15px 25px; border-radius:10px; text-decoration:none; 
-            font-weight:bold; font-size:16px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+  <a href="http://www.seduc.pi.gov.br/" class= "seduc" target="_blank">
     <img src="publica/Seduc_PI_logo.png" alt="SEDUC PI" style="height:60px; vertical-align:middle; margin-right:10px;">
     <p>Acesse a Seduc PI</p>
   </a>
@@ -290,39 +275,22 @@ document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
 <div style="position:fixed; top:20px; right:20px; z-index:1000;">
 
   <!-- ÍCONE DE LUPA -->
-  <button id="search-toggle" 
-          style="background:#0a3d62; color:white; border:none; border-radius:50%; padding:12px; font-size:18px; cursor:pointer; box-shadow:0 4px 10px rgba(0,0,0,0.3);">
-    🔍
+  <button id="search-toggle" class="search">
+    <img src="publica/search.svg" alt="procurar">
   </button>
 
   <!-- CAMPO DE PESQUISA -->
-  <div id="search-container" style="display:none; margin-top:10px; text-align:right; overflow:hidden;">
-    <form action="https://www.google.com/search" method="get" target="_blank" style="display:flex; width:0; transition:width 0.4s;">
+  <div id="search-container" style="display:none; text-align:right; overflow:hidden;">
+    <form action="https://www.google.com/search" method="get" target="_blank" style="display:flex; width:0; transition:width 0.9s;">
       <input type="text" name="q" placeholder="Pesquisar..." 
              style="padding:8px; border-radius:5px 0 0 5px; border:1px solid #ccc; width:100%; outline:none;">
-      <button type="submit" 
-              style="background:#0a3d62; color:white; border:none; padding:8px 12px; border-radius:0 5px 5px 0; cursor:pointer;">
-        🔍
+      <button type="submit" class="submit" style="background:#0a3d62; color:white; border:none; padding:8px 12px; border-radius:0 5px 5px 0; cursor:pointer;">
+        <img src="publica/search.svg" alt="procurar">
       </button>
     </form>
   </div>
 
-</div>
-
-<!-- SCRIPT INLINE PARA ANIMAÇÃO -->
-<script src="script.js"></script>
-
-  <!-- CAMPO DE PESQUISA -->
-  <div id="search-box" style="display:none; margin-top:5px; text-align:right;">
-    <form action="https://www.google.com/search" method="get" target="_blank" style="display:flex;">
-      <input type="text" name="q" placeholder="Pesquisar..." 
-             style="padding:8px; border-radius:5px 0 0 5px; border:1px solid #ccc; width:200px; outline:none;">
-      <button type="submit" 
-              style="background:#0a21ee; color:white; border:none; padding:8px 12px; border-radius:0 5px 5px 0; cursor:pointer;">
-        🔍
-      </button>
-    </form>
-  </div>
+</div> 
 
 </div>
 
@@ -331,7 +299,7 @@ document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
   <h2 style="color:#0a3d62; margin-bottom:30px;">Agradecimento Especial</h2>
 
   <!-- FOTO DO GOVERNADOR -->
-  <img src="publica/governador.jpg" alt="Governador do Piauí" 
+  <img src="publica/governador.jpeg" alt="Governador do Piauí" 
        style="width:200px; height:200px; border-radius:50%; object-fit:cover; margin-bottom:20px; border:4px solid #0a3d62;">
        <img src="publica/rodrigotorres.jpeg" alt="Governador do Piauí" 
        style="width:200px; height:200px; border-radius:50%; object-fit:cover; margin-bottom:20px; border:4px solid #0a3d62;">
@@ -342,9 +310,12 @@ document.querySelectorAll('.hidden').forEach(el=>observer.observe(el));
     Graças a esse incentivo, nossa escola foi inaugurada com estrutura moderna e recursos que permitirão a formação de alunos críticos, responsáveis e preparados para construir um futuro brilhante.
   </p>
 </section>
+<script src="script.js"></script>
+</body>
+</html>
 
 <footer>
-<p>© 2026 - CETI Francisco Luís de Moraes</p>
+<p>©  <span id="ano"></span> - CETI Francisco Luís de Moraes</p>
 <p>Lagoa do Piauí - PI</p>
-<p>Desenvolvedor: Brendon Alves dos Santos Lima</p>
+<p>Desenvolvedor: Brendon Alves & Marcos Richelly</p>
 </footer>
